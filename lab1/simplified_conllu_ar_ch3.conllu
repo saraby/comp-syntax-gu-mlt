@@ -1,0 +1,458 @@
+## position word postag head label
+## position word    _   postag  _   _   head label  _   _
+
+
+# sent_id = 1
+# text = ؟من هم
+# original_text = ؟من هم
+# text_en = Who are they?
+1	مَن  PRON 0	root
+2	هؤلاء	DET	1	nmod
+3	؟	PUNCT   1	punct
+
+
+# sent_id = 2
+# text = تمر بسرعة بلدة صغيرة بمئذنتين.
+# original_text = تمر بسرعة بلدة صغيرة بمئذنتين.
+# text_en = A small town with two minarets glides by.
+1	تمر VERB    0	root
+2	ب   ADP 3	case
+3	سرعة    NOUN    1	obl
+4	بلدة    NOUN    3	nmod
+5	صغيرة   ADJ 4	amod
+6	بمئذنتين    ADJ 4	amod
+7	.   PUNCT   1	punct
+
+
+# sent_id = 3
+# text = كنت مجرد صبي ذي حذاء موحل.
+# original_text = كنت مجرد صبي ذي حذاء موحل.
+# text_en = I was just a boy with muddy shoes.
+1	كنت AUX 3	cop
+2	مجرد        NOUN    3	advcl
+3	صبي NOUN    0	root
+4	ذي  ADJ 3	amod
+5	حذاء    NOUN    4	nmod
+6	موحل    ADJ 5	amod
+7	.   PUNCT   2	punct
+
+
+# sent_id = 4
+# text = اختارت شرطة مرور شنزن عقوبات غير تقليدية سابقًا.
+# original_text = اختارت شرطة مرور شنزن عقوبات غير تقليدية سابقًا.
+# text_en = Shenzhen's traffic police have opted for unconventional penalties before.
+1	اختارت  VERB    0	root
+2	شرطة    NOUN    1	nsubj
+3	مرور    NOUN    2	nmod
+4	شنزن    PROPN   3	nmod
+5	عقوبات  NOUN    1	obj
+6	غير NOUN    5	nmod
+7	تقليدية ADJ 6	amod
+8	سابقًا   ADJ 1	obl
+9	.   PUNCT   1	punct
+
+
+# sent_id = 5
+# text = دراسة البراكين تسمى علم البراكين أو أحيانا فولكونوجي.
+# original_text = دراسة البراكين تسمى علم البراكين أو أحيانا فولكونوجي.
+# text_en = The study of volcanoes is called volcanology, sometimes spelled vulcanology.
+1	دراسة   NOUN    3	nsubj
+2	البراكين    NOUN    1	nmod
+3	تسمى    VERB    0	root
+4	علم NOUN    3	obj
+5	البراكين    NOUN    4	nmod
+6	أو  CCONJ   8	cc
+7	أحيانا  ADV    8	advcl
+8	فولكونوجي   PROPN    7	conj
+9	.   PUNCT   3	punct
+
+
+# sent_id = 6
+# text = لقد أجريت من على السواحل المكسيكية منذ نيسان وحتى حزيران.
+# original_text = لقد أجريت من على السواحل المكسيكية منذ نيسان وحتى حزيران.
+# text_en = It was conducted just off the Mexican coast from April to June.
+1	لقد PART    2	obl
+2	أجريت   VERB    0	root
+3	من  ADP 5	case
+4	على ADP 3	fixed
+5	السواحل NOUN    2	obl
+6	المكسيكية   ADJ 5	amod
+7	منذ ADP 8	case
+8	نيسان   NOUN    2	obl
+9	و   CCONJ   11	cc
+10	حتى ADP 11	case
+11	حزيران  NOUN    8	obl
+12	.   PUNCT   2	punct
+
+
+# sent_id = 7
+# text = قالت ليڤ: "صوتها حرفيًا لف حول العالم".
+# original_text = قالت ليڤ: "صوتها حرفيًا لف حول العالم".
+# text_en = "Her voice literally went around the world," Leive said.
+1	قالت    VERB    0	root
+2	ليڤ PROPN   1	nsubj
+3	:   PUNCT   1	punct
+4	"   PUNCT   1	punct
+5	صوت NOUN    8	nsubj
+6	ها  PRON    5	nmod
+7	حرفيًا   ADV 8	advmod
+8	لف  VERB    1	ccomp
+9	حول ADP 10	case
+10	العالم  NOUN    8	obl
+11	"   PUNCT   1	punct
+12	.   PUNCT   1	punct
+
+
+# sent_id = 8
+# text = أخبر شاهد الشرطة أن الضحية هاجم المشتبه به في شهر نيسان.
+# text = أخبر شاهد الشرطة أن الضحية هاجم المشتبه به في شهر نيسان.
+# text = A witness told police that the victim had attacked the suspect in April.
+1	أخبر    VERB    0	root
+2	شاهد    NOUN    1	nsubj
+3	الشرطة  NOUN    2	nmod
+4	أن  SCONJ   6	mark
+5	الضحية  NOUN    6	nsubj
+6	هاجم    VERB    1	ccomp
+7	المشتبه ADJ 6	obj
+8	ب   ADP 9	case
+9	ه   PRON    7	nmod
+10	في  ADP 11	case
+11	شهر NOUN    6	obl
+12	نيسان   NOUN    11	nmod
+13	.   PUNCT   1	punct
+
+
+# sent_id = 9
+# text = يكون بقمة وضوحه عندما يكون اسم الشخص المشهور في البداية نادرًا جدًا.
+# original_text = يكون بقمة وضوحه عندما يكون اسم الشخص المشهور في البداية نادرًا جدًا.
+# text_en = It's most obvious when a celebrity's name is initially quite rare.
+1	يكون    AUX 3	cop
+2	بقمة    ADV    3	advcl
+3	وضوح    NOUN    0	root
+4	ه   PRON    3	nmod
+5	عندما   CCONJ   12	mark
+6	يكون    AUX 3	ccomp
+7	اسم NOUN    12	nsubj
+8	الشخص   NOUN    7	nmod
+9	المشهور ADJ 8	amod
+10	في  ADP 11	case
+11	البداية NOUN    6	obl
+12	نادرًا   ADV 6	advcl
+13	جدًا NOUN    12	obl
+14	.   PUNCT   3	punct
+
+
+# sent_id = 10
+# text = هذا لم يوقف المستثمرين عن الاحتشاد لوضع أموالهم في صناديق الادخار.
+# original_text = هذا لم يوقف المستثمرين عن الاحتشاد لوضع أموالهم في صناديق الادخار.
+# text_en = This has not stopped investors flocking to put their money in the funds.
+1	هذا PRON    3	nsubj
+2	لم  PART    3	advmod
+3	يوقف    VERB    0	root
+4	المستثمرين  NOUN    3	nsubj
+5	عن  ADP 6	case
+6	الاحتشاد    NOUN    3	obl:arg
+7	ل   ADP 8	case
+8	وضع NOUN    6	nmod
+9	أموال   NOUN    8	nmod
+10	هم  PRON    9	nmod
+11	في  ADP 12	case
+12	صناديق  NOUN    8	nmod
+13	الادخار NOUN    12	nmod
+14	.   PUNCT   3	punct
+
+
+# sent_id = 11
+# text = هذا الخلاف بين البيانات الاقتصادية والخطاب السياسي أمر مألوف أو ينبغي أن يكون كذلك.
+# original_text = هذا الخلاف بين البيانات الاقتصادية والخطاب السياسي أمر مألوف أو ينبغي أن يكون كذلك.
+# text_en = This discordance between economic data and political rhetoric is familiar, or should be.
+1	هذا DET 2	det
+2	الخلاف  NOUN    9	nsubj 
+3	بين ADP 4	case
+4	البيانات    NOUN    2	nmod
+5	الاقتصادية  ADJ 4	amod
+6	و   CCONJ   7	cc
+7	الخطاب  NOUN    4	conj
+8	السياسي ADJ 4	amod
+9	أمر NOUN    0	root
+10	مألوف   ADJ 9	amod
+11	أو  CCONJ   11	cc
+12	ينبغي   VERB    9	conj
+13	أن  SCONJ   13	mark
+14	يكون    VERB    12	csubj
+15	كذلك    ADV 14	advmod:emph
+16	.   PUNCT   9	punct
+
+
+# sent_id = 12
+# text = تقدر دراسة الجدوى أن الركاب سيستغرقون حوالي أربع دقائق لعبور نهر بوتوماك على الجندول.
+# original_text = تقدر دراسة الجدوى أن الركاب سيستغرقون حوالي أربع دقائق لعبور نهر بوتوماك على الجندول.
+# text_en = The feasibility study estimates that it would take passengers about four minutes to cross the Potomac River on the gondola.
+1	تقدر    VERB    0	root
+2	دراسة   NOUN    1	nsubj
+3	الجدوى  NOUN    2	nmod
+4	أن  SCONJ   6	mark
+5	الركاب  NOUN    6	nsubj
+6	سيستغرقون   VERB    1	ccomp
+7	حوالي   ADV 8	advmod
+8	أربع    NUM 9	nummod
+9	دقائق   NOUN    6	obj
+10	ل   ADP 11	case
+11	عبور NOUN   6 obl
+12	نهر NOUN    11	nmod
+13	بوتوماك	    PROPN   12	flat
+14	على ADP 15	case
+15	الجندول NOUN    11	obl
+16	.   PUNCT   1	punct
+
+
+# sent_id = 13
+# text = لقد جمع بطاقات وقام بمقايضتها مع الفتية الآخرين.
+# original_text = لقد جمع بطاقات وقام بمقايضتها مع الفتية الآخرين.
+# text_en = he collected cards and traded them with the other boys
+1	لقد PART    2	obl
+2	جمع VERB    0	root
+3	بطاقات  NOUN    2	obj
+4	و   CCONJ   5	cc
+5	قام VERB    2	conj
+6	ب   ADP 7	case
+7	مقايضة NOUN    5	obl
+8	ها  PRON    7	nmod
+9	مع  ADP 10	case
+10	الفتية  NOUN    5	obl
+11	الآخرين ADJ 10	amod
+12	.   PUNCT   2	punct
+
+
+# sent_id = 14
+# text = هذه الجريمة تحمل عقوبة تصل لخمس سنوات في السجن.
+# original_text = هذه الجريمة تحمل عقوبة تصل لخمس سنوات في السجن.
+# text_en = this crime carries a penalty of five years in prison
+1	هذه DET 2	det
+2	الجريمة NOUN    3	nsubj
+3	تحمل    VERB    0	root
+4	عقوبة   NOUN    3	obj
+5	تصل VERB    4	acl
+6	ل   ADP 7	case
+7	خمس    NUM 8	nummod
+8	سنوات   NOUN    7	nmod
+9	في  ADP 9	case
+10	السجن   NOUN    5	obl
+11	.   PUNCT   3	punct
+
+
+# sent_id = 15
+# text = تم توصيل الأخبار إلى كل قرية في المقاطعة.
+# original_text = تم توصيل الأخبار إلى كل قرية في المقاطعة.
+# text_en = the news was carried to every village in the province
+1	تم  VERB    0	root
+2	توصيل   NOUN    1	nsubj
+3	الأخبار NOUN    2	nmod
+4	إلى ADP 5	case
+5	كل  NOUN    2	obl
+6	قرية    NOUN    5	nmod
+7	في  ADP 8	case
+8	المقاطعة    NOUN    6	nmod
+9	.   PUNCT   1	punct
+
+
+# sent_id = 16
+# text = هذه الأفكار لا تبارح رأسي.
+# original_text = هذه الأفكار لا تبارح رأسي.
+# text_en = I carry these thoughts in the back of my head
+1	هذه DET 2	det
+2	الأفكار NOUN    4	nsubj
+3	لا  PART    4	advmod
+4	تبارح   VERB    0	root
+5	رأسي    ADJ 4	obj
+6	.   PUNCT   4	punct
+
+
+# sent_id = 17
+# text = كان آدم لينقل إلى الحياة الأبدية.
+# original_text = كان آدم لينقل إلى الحياة الأبدية.
+# text_en = Adam would have been carried over into the life eternal
+1	كان VERB    0	root
+2	آدم PROPN	1	nsubj
+3	ل   CCONJ	4	mark
+4	ينقل    VERB    1	advcl
+5	إلى ADP 6	case
+6	الحياة  NOUN    4	obl
+7	الأبدية ADJ 6	amod
+8	.   PUNCT   1	punct
+
+
+# sent_id = 18
+# text = تحللت الأغلفة وكان يجب استبدالها.
+# original_text = تحللت الأغلفة وكان يجب استبدالها.
+# text_en = the casings had rotted away and had to be replaced
+
+1	تحللت   VERB    0	root
+2	الأغلفة NOUN    1	nsubj
+3	و   CCONJ   4	cc
+4	كان VERB    1	conj
+5	يجب VERB    4	acl:relcl
+6	استبدال NOUN    5	nsubj
+7	ها  PRON    6	nmod
+8	.   PUNCT   1	punct
+
+
+# sent_id = 19
+# text = كانت مغتاظة من أن هذه الفتاة الوقحة قد تجرؤ وتجعل منها أضحوكة أمام الفصل.
+# original_text = كانت مغتاظة من أن هذه الفتاة الوقحة قد تجرؤ وتجعل منها أضحوكة أمام الفصل.
+# text_en = she was incensed that this chit of a girl should dare to make a fool of her in front of the class
+1	كانت    AUX 2	cop
+2	مغتاظة  ADJ	   0	root
+3	من  ADP 9	mark
+4	أن  SCONJ   9	mark
+5	هذه DET 6	det
+6	الفتاة  NOUN    9	nsubj
+7	الوقحة  ADJ    6	amod
+8	قد  PART    9	compound:prt
+9	تجرؤ    VERB    2	ccomp
+10	و   CCONJ   11	cc
+11	تجعل    VERB    9	conj
+12	من  ADP 13	case
+13	ها      PRON    11	obl
+14	أضحوكة  NOUN    11	obj
+15	أمام    ADP 16	case
+16	الفصل   NOUN    14	nmod
+17	.   PUNCT   2	punct
+
+
+# sent_id = 20
+# text = الفوز الساحق الذي حققه حققه في المجمع الانتخابي غطى على فوزه الخجول بحصوله على 43% فقط من من الأصوات الشعبية.
+# original_text = الفوز الساحق الذي حققه حققه في المجمع الانتخابي غطى على فوزه الخجول بحصوله على 43% فقط من من الأصوات الشعبية.
+# text_en = the landslide he had in the electoral college obscured the narrowness of a victory based on just 43% of the popular vote
+1	الفوز   NOUN    9	nsubj
+2	الساحق  ADJ 1	amod
+3	الذي    DET 4	nsubj
+4	حقق VERB    1	acl:relcl
+5	ه   PRON    4	obj
+6	في  ADP 7	case
+7	المجمع  NOUN    4	obl
+8	الانتخابي   ADJ 7	amod
+9	غطى VERB    0	root
+10	على ADP 11	case
+11	فوز NOUN    9	obl:arg
+12	ه   PRON    11	nmod
+13	الخجول  ADJ 11	nmod
+14	ب   ADP 15	case
+15	حصول    NOUN    11	nmod
+16	ه   PRON    15	nmod
+17	على ADP 18	case
+18	43  NUM 15	nummod
+19	%   SYM 18	nmod
+20	فقط ADV 18	advmod
+21	من  ADP 23	case
+22	من  ADP 23	case
+23	الأصوات NOUN    18	nmod
+24	الشعبية ADJ 23	amod
+25	.   PUNCT   9	punct
+
+
+# sent_id = 21
+# text = تحمل قوات الولايات المتحدة الآن أتروبين و حاقنات آلية في معدات الإسعافات الأولية لاستخدامها في حالة التسمم بغاز الأعصاب الفوسفات العضوي.
+# original_text = تحمل قوات الولايات المتحدة الآن أتروبين و حاقنات آلية في معدات الإسعافات الأولية لاستخدامها في حالة التسمم بغاز الأعصاب الفوسفات العضوي.
+# text_en = United States troops now carry atropine and autoinjectors in their first-aid kits to use in case of organophosphate nerve agent poisoning
+1	تحمل    VERB    0	root
+2	قوات    NOUN    1	nsubj
+3	الولايات    NOUN    2	nmod
+4	المتحدة ADJ 3	amod
+5	الآن    NOUN    1	obl
+6	أتروبين NOUN    1	obj
+7	و   CCONJ   8	cc
+8	حاقنات  NOUN    6	conj
+9	آلية    ADJ 8	amod
+10	في  ADP 11	case
+11	معدات   NOUN    1	obl
+12	الإسعافات   NOUN    11	nmod
+13	الأولية ADJ 11	amod
+14	ل   ADP 15	case
+15	استخدام NOUN    1	obl
+16	ها  PRON    15	nmod
+17	في  ADP 18	case
+18	حالة    NOUN    15	nmod
+19	التسمم  NOUN    18	nmod
+20	بغاز    NOUN    19	nmod
+21	الأعصاب NOUN    20	nmod
+22	الفوسفات    PROPN   19	nmod
+23	العضوي  ADJ 20	amod
+24	.   PUNCT   1	punct
+
+
+# sent_id = 22
+# text = هو قد ينجز بالدهاء على المدى الطويل ما لا يستطيع إنجازه بالعنف والقوة على المدى القصير.
+# original_text = هو قد ينجز بالدهاء على المدى الطويل ما لا يستطيع إنجازه بالعنف والقوة على المدى القصير.
+# text_en = he may accomplish by craft in the long run what he cannot do by force and violence in the short one
+1	هو  PRON    3	nsubj
+2	قد  PART    3	compound:prt
+3	ينجز    VERB    0	root
+4	ب   ADP 5	case
+5	الدهاء  NOUN    3	obl
+6	على ADP 7	case
+7	المدى   NOUN    3	obl
+8	الطويل  ADJ 7	amod
+9	ما  DET 11	obl
+10	لا  PART    11	advmod
+11	يستطيع  VERB    3	conj
+12	إنجازه  NOUN    11	obj
+13	ب   ADP 14	case
+14	العنف   NOUN    12	nmod
+15	و   CCONJ   16	cc
+16	القوة   NOUN    14	conj
+17	على ADP 18	case
+18	المدى   NOUN    12	obl
+19	القصير  ADJ 18	amod
+20	.   PUNCT   3	punct
+
+
+# sent_id = 23
+# text = أحدهم قال أن فقط مجتمعًا هرميًا تترأسه طبقة مرفهة يمكنه إنتاج أعمال فنية.
+# original_text = أحدهم قال أن فقط مجتمعًا هرميًا تترأسه طبقة مرفهة يمكنه إنتاج أعمال فنية.
+# text_en = it has been said that only a hierarchical society with a leisure class at the top can produce works of art
+1	أحد NOUN    3	nsubj
+2	هم  PRON    1	nmod
+3	قال	    VERB    0	root
+4	أن  SCONJ   6	mark
+5	فقط ADV 6	advmod
+6	مجتمعًا  NOUN    3	obj
+7	هرميًا   ADJ 6	amod
+8	تترأس   VERB    6	acl
+9	ه   PRON    8	obj
+10	طبقة    NOUN    8	nsubj
+11	مرفهة   ADJ 10	amod
+12	يمكن    VERB    6	acl
+13	ه   PRON    12	obj
+14	إنتاج   NOUN    12	nsubj
+15	أعمال   NOUN    14	nmod
+16	فنية    ADJ 15	amod
+17	.   PUNCT   3	punct
+
+
+# sent_id = 24
+# text = تفسيره الساذج بأنه لم يكن ليحرق الكنيسة لو لم يكن يظن أن الأسقف كان موجودًا بداخلها.
+# original_text = تفسيره الساذج بأنه لم يكن ليحرق الكنيسة لو لم يكن يظن أن الأسقف كان موجودًا بداخلها.
+# text_en = his ingenuous explanation that he would not have burned the church if he had not thought the bishop was in it
+1	تفسير   NOUN    0	root
+2	ه   PRON    1	nmod
+3	الساذج  ADJ 1	amod
+4	ب   ADP 8	mark
+5	أن  SCONJ   8	mark
+6	ه   PRON    8	nsubj
+7	لم  PART    8	advmod
+8	يكن	    VERB    1	ccomp
+9	ل   CCONJ	10	mark
+10	يحرق VERB   8	advcl
+11	الكنيسة NOUN    10	nmod
+12	لو  CCONJ   14	mark
+13	لم  PART    14	advmod
+14	يكن VERB    8	advcl
+15	يظن VERB    14	xcomp
+16	أن  SCONJ   19	mark
+17	الأسقف  NOUN    19	nsubj
+18	كان AUX 19	cop
+19	موجودًا	    ADJ 15	ccomp
+20	بداخل   ADP 21	case
+21	ها  PRON    19	obl
+22	.   PUNCT   1   punct
