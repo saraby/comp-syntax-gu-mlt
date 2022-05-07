@@ -1,0 +1,484 @@
+
+# text = مَن:<PRON> هؤلاء:<DET> ؟:<PUNCT>
+# analyses = 4
+# parsetree = (Utt (QS (IP مَن) (NP (Det هؤلاء)) (Punct '؟')))
+# weight = 2.0000000000000006e-4
+1	مَن	_	PRON	_	_	0	root	_	_
+2	هؤلاء	_	DET	_	_	1	nmod	_	_
+3	؟	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = تمر:<VERB> ب:<ADP> سرعة:<NOUN> بلدة:<NOUN> صغيرة:<ADJ> بمئذنتين:<ADJ> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (VP (V تمر) (NP_obl (Prep ب) (NP (CN (N سرعة))))) (NP (CN (CN (CN (N بلدة)) (AP (A صغيرة))) (AP (A بمئذنتين)))))) (Punct '.'))
+# weight = 1.5625000000000008e-9
+1	تمر	_	VERB	_	_	0	root	_	_
+2	ب	_	ADP	_	_	3	case	_	_
+3	سرعة	_	NOUN	_	_	1	obl	_	_
+4	بلدة	_	NOUN	_	_	1	nsubj	_	_
+5	صغيرة	_	ADJ	_	_	4	amod	_	_
+6	بمئذنتين	_	ADJ	_	_	4	amod	_	_
+7	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = كنت:<AUX> مجرد:<NOUN> صبي:<NOUN> ذي:<ADJ> حذاء:<NOUN> موحل:<ADJ> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (VP (aux كنت)) (NP (NP (CN (N مجرد))) (NP (CN (CN (N صبي)) (AP (A ذي) (CN (CN (N حذاء)) (AP (A موحل))))))))) (Punct '.'))
+# weight = 1.5625000000000009e-12
+1	كنت	_	AUX	_	_	0	root	_	_
+2	مجرد	_	NOUN	_	_	1	nsubj	_	_
+3	صبي	_	NOUN	_	_	2	nmod	_	_
+4	ذي	_	ADJ	_	_	5	amod	_	_
+5	حذاء	_	NOUN	_	_	3	amod	_	_
+6	موحل	_	ADJ	_	_	5	amod	_	_
+7	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = اختارت:<VERB> شرطة:<NOUN> مرور:<NOUN> شنزن:<PROPN> عقوبات:<NOUN> غير:<NOUN> تقليدية:<ADJ> سابقًا:<ADV> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (S (VP (V اختارت))) (NP (NP (CN (N شرطة))) (NP (NP (CN (N مرور))) (NP (NP (PN شنزن)) (NP (NP (CN (N عقوبات))) (NP (CN (CN (N غير)) (AP (A تقليدية)))))))) (Adv سابقًا))) (Punct '.'))
+# weight = 4.882812500000002e-13
+1	اختارت	_	VERB	_	_	0	root	_	_
+2	شرطة	_	NOUN	_	_	1	obj	_	_
+3	مرور	_	NOUN	_	_	2	nmod	_	_
+4	شنزن	_	PROPN	_	_	3	nmod	_	_
+5	عقوبات	_	NOUN	_	_	4	nmod	_	_
+6	غير	_	NOUN	_	_	5	nmod	_	_
+7	تقليدية	_	ADJ	_	_	6	amod	_	_
+8	سابقًا	_	ADV	_	_	1	advmod	_	_
+9	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = دراسة:<NOUN> البراكين:<NOUN> تسمى:<VERB> علم:<NOUN> البراكين:<NOUN> أو:<CCONJ> أحيانا:<ADV> فولكونوجي:<PROPN> .:<PUNCT>
+# analyses = 3
+# parsetree = (Chunks (ListS (S (NP (NP (CN (N دراسة))) (NP (CN (N البراكين)))) (VP (V2 تسمى) (NP (NP (CN (N علم))) (NP (CN (N البراكين))))))) (Adv_conj (Conj أو) (Adv أحيانا) (NP (PN فولكونوجي))) (Punct '.'))
+# weight = 1.5625000000000012e-15
+1	دراسة	_	NOUN	_	_	3	nsubj	_	_
+2	البراكين	_	NOUN	_	_	1	nmod	_	_
+3	تسمى	_	VERB	_	_	0	root	_	_
+4	علم	_	NOUN	_	_	3	obj	_	_
+5	البراكين	_	NOUN	_	_	4	nmod	_	_
+6	أو	_	CCONJ	_	_	8	cc	_	_
+7	أحيانا	_	ADV	_	_	8	advcl	_	_
+8	فولكونوجي	_	PROPN	_	_	3	dep	_	_
+9	.	_	PUNCT	_	_	3	dep	_	_
+
+
+
+# text = لقد:<PART> أجريت:<VERB> من:<ADP> على:<ADP> السواحل:<NOUN> المكسيكية:<ADJ> منذ:<ADP> نيسان:<NOUN> و:<CCONJ> حتى:<ADP> حزيران:<NOUN> .:<PUNCT>
+# analyses = 3
+# parsetree = (Chunks (ListS (S (VP (part لقد) (V2 أجريت)) (NP_obl (Prep من) (Prep على) (NP (CN (CN (N السواحل)) (AP (A المكسيكية))))) (NP_obl (Prep منذ) (NP (CN (N نيسان)))))) (Adv_conj (Conj و) (Adv (Prep حتى) (NP (CN (N حزيران))))) (Punct '.'))
+# weight = 1.2500000000000017e-17
+1	لقد	_	PART	_	_	2	mark	_	_
+2	أجريت	_	VERB	_	_	0	root	_	_
+3	من	_	ADP	_	_	5	case	_	_
+4	على	_	ADP	_	_	5	fixed	_	_
+5	السواحل	_	NOUN	_	_	2	obl	_	_
+6	المكسيكية	_	ADJ	_	_	5	amod	_	_
+7	منذ	_	ADP	_	_	8	case	_	_
+8	نيسان	_	NOUN	_	_	2	obl	_	_
+9	و	_	CCONJ	_	_	11	cc	_	_
+10	حتى	_	ADP	_	_	11	case	_	_
+11	حزيران	_	NOUN	_	_	2	dep	_	_
+12	.	_	PUNCT	_	_	2	dep	_	_
+
+
+
+# text = قالت:<VERB> ليڤ:<PROPN> ::<PUNCT> ":<PUNCT> صوت:<NOUN> ها:<PRON> حرفيًا:<ADV> لف:<VERB> حول:<ADP> العالم:<NOUN> ":<PUNCT> .:<PUNCT>
+# analyses = 2
+# parsetree = (Chunks (Utt (Utt (Utt (S (VP (V2 قالت) (NP (PN ليڤ))))) (Punct ':')) (Punct '"')) (Utt (Utt (Utt (S (NP (NP (CN (N صوت))) (NP (Pron ها))) (Adv حرفيًا) (VP (V لف) (NP_obl (Prep حول) (NP (CN (N العالم))))))) (Punct '"')) (Punct '.')))
+# weight = 1.5625000000000013e-18
+1	قالت	_	VERB	_	_	0	root	_	_
+2	ليڤ	_	PROPN	_	_	1	obj	_	_
+3	:	_	PUNCT	_	_	1	punct	_	_
+4	"	_	PUNCT	_	_	1	punct	_	_
+5	صوت	_	NOUN	_	_	8	nsubj	_	_
+6	ها	_	PRON	_	_	5	nmod	_	_
+7	حرفيًا	_	ADV	_	_	8	advmod	_	_
+8	لف	_	VERB	_	_	1	dep	_	_
+9	حول	_	ADP	_	_	10	case	_	_
+10	العالم	_	NOUN	_	_	8	obl	_	_
+11	"	_	PUNCT	_	_	8	punct	_	_
+12	.	_	PUNCT	_	_	8	punct	_	_
+
+
+
+# text = أخبر:<VERB> شاهد:<NOUN> الشرطة:<NOUN> أن:<SCONJ> الضحية:<NOUN> هاجم:<VERB> المشتبه:<ADJ> ب:<ADP> ه:<PRON> في:<ADP> شهر:<NOUN> نيسان:<NOUN> .:<PUNCT>
+# analyses = 2
+# parsetree = (Chunks (ListS (S (VP (V2 أخبر) (NP (NP (CN (N شاهد))) (NP (CN (N الشرطة))))) (S_that (that أن) (NP (CN (N الضحية))) (S (VP (V هاجم)))))) (Utt (Utt (AP (AP (A المشتبه)) (NP_obl (Prep ب) (NP (NP (Pron ه)) (NP_obl (Prep في) (NP (NP (CN (N شهر))) (NP (CN (N نيسان))))))))) (Punct '.')))
+# weight = 1.220703125000001e-21
+1	أخبر	_	VERB	_	_	0	root	_	_
+2	شاهد	_	NOUN	_	_	1	obj	_	_
+3	الشرطة	_	NOUN	_	_	2	nmod	_	_
+4	أن	_	SCONJ	_	_	6	mark	_	_
+5	الضحية	_	NOUN	_	_	6	nsubj	_	_
+6	هاجم	_	VERB	_	_	1	nsubj	_	_
+7	المشتبه	_	ADJ	_	_	1	dep	_	_
+8	ب	_	ADP	_	_	9	case	_	_
+9	ه	_	PRON	_	_	7	nmod	_	_
+10	في	_	ADP	_	_	11	case	_	_
+11	شهر	_	NOUN	_	_	9	nmod	_	_
+12	نيسان	_	NOUN	_	_	11	nmod	_	_
+13	.	_	PUNCT	_	_	7	punct	_	_
+
+
+
+# text = يكون:<AUX> ب:<ADP> قمة:<NOUN> وضوح:<NOUN> ه:<PRON> عندما:<CCONJ> يكون:<AUX> اسم:<NOUN> الشخص:<NOUN> المشهور:<ADJ> في:<ADP> البداية:<NOUN> نادرًا:<ADV> جدًا:<NOUN> .:<PUNCT>
+# analyses = 2
+# parsetree = (Chunks (ListS (S (S (cop يكون) (Adv (Prep ب) (NP (NP (CN (N قمة))) (NP (NP (CN (N وضوح))) (NP (Pron ه))))) (VP_conj (Conj عندما) (VP (aux يكون)))) (NP (NP (CN (N اسم))) (NP (CN (CN (N الشخص)) (AP (A المشهور))))) (Adv (Adv (Prep في) (NP (CN (N البداية)))) (Adv نادرًا)))) (Utt (Utt (NP (CN (N جدًا)))) (Punct '.')))
+# weight = 2.441406250000003e-26
+1	يكون	_	AUX	_	_	3	cop	_	_
+2	ب	_	ADP	_	_	3	case	_	_
+3	قمة	_	NOUN	_	_	0	root	_	_
+4	وضوح	_	NOUN	_	_	3	nmod	_	_
+5	ه	_	PRON	_	_	4	nmod	_	_
+6	عندما	_	CCONJ	_	_	7	cc	_	_
+7	يكون	_	AUX	_	_	3	ccomp	_	_
+8	اسم	_	NOUN	_	_	3	obj	_	_
+9	الشخص	_	NOUN	_	_	8	nmod	_	_
+10	المشهور	_	ADJ	_	_	9	amod	_	_
+11	في	_	ADP	_	_	12	case	_	_
+12	البداية	_	NOUN	_	_	3	advmod	_	_
+13	نادرًا	_	ADV	_	_	12	obl	_	_
+14	جدًا	_	NOUN	_	_	3	dep	_	_
+15	.	_	PUNCT	_	_	14	punct	_	_
+
+
+
+# text = هذا:<PRON> لم:<PART> يوقف:<VERB> المستثمرين:<NOUN> عن:<ADP> الاحتشاد:<NOUN> ل:<ADP> وضع:<NOUN> أموال:<NOUN> هم:<PRON> في:<ADP> صناديق:<NOUN> الادخار:<NOUN> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (NP (Pron هذا)) (VP (part لم) (V2 يوقف) (NP (NP (CN (N المستثمرين))) (NP_obl (Prep عن) (NP (NP (CN (N الاحتشاد))) (NP_obl (Prep ل) (NP (NP (NP (CN (N وضع))) (NP (NP (CN (N أموال))) (NP (Pron هم)))) (NP_obl (Prep في) (NP (NP (CN (N صناديق))) (NP (CN (N الادخار))))))))))))) (Punct '.'))
+# weight = 1.220703125000001e-18
+1	هذا	_	PRON	_	_	3	nsubj	_	_
+2	لم	_	PART	_	_	3	mark	_	_
+3	يوقف	_	VERB	_	_	0	root	_	_
+4	المستثمرين	_	NOUN	_	_	3	obj	_	_
+5	عن	_	ADP	_	_	6	case	_	_
+6	الاحتشاد	_	NOUN	_	_	4	nmod	_	_
+7	ل	_	ADP	_	_	8	case	_	_
+8	وضع	_	NOUN	_	_	6	nmod	_	_
+9	أموال	_	NOUN	_	_	8	nmod	_	_
+10	هم	_	PRON	_	_	9	nmod	_	_
+11	في	_	ADP	_	_	12	case	_	_
+12	صناديق	_	NOUN	_	_	8	nmod	_	_
+13	الادخار	_	NOUN	_	_	12	nmod	_	_
+14	.	_	PUNCT	_	_	3	punct	_	_
+
+
+
+# text = هذا:<DET> الخلاف:<NOUN> بين:<ADP> البيانات:<NOUN> الاقتصادية:<ADJ> و:<CCONJ> الخطاب:<NOUN> السياسي:<ADJ> أمر:<NOUN> مألوف:<ADJ> ,:<PUNCT> أو:<CCONJ> ينبغي:<AUX> أن:<PART> يكون:<AUX> كذلك:<ADV> .:<PUNCT>
+# analyses = 3
+# parsetree = (Chunks (ListS (S (NP_front (NP (NP (Det هذا) (CN (N الخلاف))) (NP_obl (Prep بين) (NP (NP (CN (CN (N البيانات)) (AP (A الاقتصادية)))) (NP_conj (Conj و) (NP (CN (CN (N الخطاب)) (AP (A السياسي)))))))) (CN (CN (N أمر)) (AP (A مألوف))) (comma ',')) (VP_conj (Conj أو) (VP (aux ينبغي))))) (VP_to (to أن) (cop يكون) (Adv كذلك)) (Punct '.'))
+# weight = 3.125000000000004e-26
+1	هذا	_	DET	_	_	2	det	_	_
+2	الخلاف	_	NOUN	_	_	9	nsubj	_	_
+3	بين	_	ADP	_	_	4	case	_	_
+4	البيانات	_	NOUN	_	_	2	nmod	_	_
+5	الاقتصادية	_	ADJ	_	_	4	amod	_	_
+6	و	_	CCONJ	_	_	7	cc	_	_
+7	الخطاب	_	NOUN	_	_	4	conj	_	_
+8	السياسي	_	ADJ	_	_	7	amod	_	_
+9	أمر	_	NOUN	_	_	0	root	_	_
+10	مألوف	_	ADJ	_	_	9	amod	_	_
+11	,	_	PUNCT	_	_	9	punct	_	_
+12	أو	_	CCONJ	_	_	13	cc	_	_
+13	ينبغي	_	AUX	_	_	9	ccomp	_	_
+14	أن	_	PART	_	_	15	mark	_	_
+15	يكون	_	AUX	_	_	9	dep	_	_
+16	كذلك	_	ADV	_	_	15	advmod	_	_
+17	.	_	PUNCT	_	_	9	dep	_	_
+
+
+
+# text = تقدر:<VERB> دراسة:<NOUN> الجدوى:<NOUN> أن:<SCONJ> الركاب:<NOUN> سيستغرقون:<VERB> حوالي:<ADV> أربع:<NUM> دقائق:<NOUN> ل:<ADP> عبور:<NOUN> نهر:<NOUN> بوتوماك:<PROPN> على:<ADP> الجندول:<NOUN> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (VP (V2 تقدر) (NP (NP (CN (N دراسة))) (NP (CN (N الجدوى))))) (S_that (that أن) (NP (CN (N الركاب))) (V2 سيستغرقون) (NP (Adv حوالي) (Num (Card أربع)) (NP (CN (N دقائق)))) (NP_obl (Prep ل) (NP (NP (NP (CN (N عبور))) (NP (NP (CN (N نهر))) (NP (PN بوتوماك)))) (NP_obl (Prep على) (NP (CN (N الجندول))))))))) (Punct '.'))
+# weight = 2.4414062500000027e-20
+1	تقدر	_	VERB	_	_	0	root	_	_
+2	دراسة	_	NOUN	_	_	1	obj	_	_
+3	الجدوى	_	NOUN	_	_	2	nmod	_	_
+4	أن	_	SCONJ	_	_	6	mark	_	_
+5	الركاب	_	NOUN	_	_	6	nsubj	_	_
+6	سيستغرقون	_	VERB	_	_	1	nsubj	_	_
+7	حوالي	_	ADV	_	_	9	advmod	_	_
+8	أربع	_	NUM	_	_	9	nummod	_	_
+9	دقائق	_	NOUN	_	_	6	obj	_	_
+10	ل	_	ADP	_	_	11	case	_	_
+11	عبور	_	NOUN	_	_	6	obl	_	_
+12	نهر	_	NOUN	_	_	11	nmod	_	_
+13	بوتوماك	_	PROPN	_	_	12	nmod	_	_
+14	على	_	ADP	_	_	15	case	_	_
+15	الجندول	_	NOUN	_	_	11	nmod	_	_
+16	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = لقد:<PART> جمع:<VERB> بطاقات:<NOUN> و:<CCONJ> قام:<VERB> ب:<ADP> مقايضة:<NOUN> ها:<PRON> مع:<ADP> الفتية:<NOUN> الآخرين:<ADJ> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (VP (ListVP (VP (part لقد) (V2 جمع) (NP (CN (N بطاقات))))) (VP_conj (Conj و) (VP (V قام) (NP_obl (Prep ب) (NP (N مقايضة) (NP_poss (Pron_poss ها)))) (NP_obl (Prep مع) (NP (CN (CN (N الفتية)) (AP (A الآخرين)))))))))) (Punct '.'))
+# weight = 1.5625000000000015e-14
+1	لقد	_	PART	_	_	2	mark	_	_
+2	جمع	_	VERB	_	_	0	root	_	_
+3	بطاقات	_	NOUN	_	_	2	obj	_	_
+4	و	_	CCONJ	_	_	5	cc	_	_
+5	قام	_	VERB	_	_	2	conj	_	_
+6	ب	_	ADP	_	_	7	case	_	_
+7	مقايضة	_	NOUN	_	_	5	obl	_	_
+8	ها	_	PRON	_	_	7	nmod	_	_
+9	مع	_	ADP	_	_	10	case	_	_
+10	الفتية	_	NOUN	_	_	5	obl	_	_
+11	الآخرين	_	ADJ	_	_	10	amod	_	_
+12	.	_	PUNCT	_	_	2	punct	_	_
+
+
+
+# text = هذه:<DET> الجريمة:<NOUN> تحمل:<VERB> عقوبة:<NOUN> تصل:<VERB> ل:<ADP> خمس:<NUM> سنوات:<NOUN> في:<ADP> السجن:<NOUN> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (NP (Det هذه) (CN (N الجريمة))) (V2 تحمل) (S (NP (CN (N عقوبة))) (V تصل) (NP_obl (Prep ل) (NP (NP (Num (Card خمس))) (NP (CN (N سنوات))))) (NP_obl (Prep في) (NP (CN (N السجن))))))) (Punct '.'))
+# weight = 3.125000000000004e-14
+1	هذه	_	DET	_	_	2	det	_	_
+2	الجريمة	_	NOUN	_	_	3	nsubj	_	_
+3	تحمل	_	VERB	_	_	0	root	_	_
+4	عقوبة	_	NOUN	_	_	3	obj	_	_
+5	تصل	_	VERB	_	_	4	acl	_	_
+6	ل	_	ADP	_	_	7	case	_	_
+7	خمس	_	NUM	_	_	4	obl	_	_
+8	سنوات	_	NOUN	_	_	7	nmod	_	_
+9	في	_	ADP	_	_	10	case	_	_
+10	السجن	_	NOUN	_	_	4	obl	_	_
+11	.	_	PUNCT	_	_	3	punct	_	_
+
+
+
+# text = تم:<VERB> توصيل:<NOUN> الأخبار:<NOUN> إلى:<ADP> كل:<NOUN> قرية:<NOUN> في:<ADP> المقاطعة:<NOUN> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (VP (V2 تم) (NP (NP (NP (CN (N توصيل))) (NP (CN (N الأخبار)))) (NP_obl (Prep إلى) (NP (NP (NP (CN (N كل))) (NP (CN (N قرية)))) (NP_obl (Prep في) (NP (CN (N المقاطعة)))))))))) (Punct '.'))
+# weight = 4.882812500000004e-13
+1	تم	_	VERB	_	_	0	root	_	_
+2	توصيل	_	NOUN	_	_	1	obj	_	_
+3	الأخبار	_	NOUN	_	_	2	nmod	_	_
+4	إلى	_	ADP	_	_	5	case	_	_
+5	كل	_	NOUN	_	_	2	nmod	_	_
+6	قرية	_	NOUN	_	_	5	nmod	_	_
+7	في	_	ADP	_	_	8	case	_	_
+8	المقاطعة	_	NOUN	_	_	5	nmod	_	_
+9	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = هذه:<DET> الأفكار:<NOUN> لا:<PART> تبارح:<VERB> رأس:<Noun> ي:<Pron> .:<PUNCT>
+# analyses = 4
+# parsetree = (Utt (Utt (S (NP (Det هذه) (CN (N الأفكار))) (VP (part لا) (V2 تبارح) (NP (N رأس) (NP_poss (Pron_poss ي)))))) (Punct '.'))
+# weight = 5.000000000000003e-8
+1	هذه	_	DET	_	_	2	det	_	_
+2	الأفكار	_	NOUN	_	_	4	nsubj	_	_
+3	لا	_	PART	_	_	4	mark	_	_
+4	تبارح	_	VERB	_	_	0	root	_	_
+5	رأس	_	NOUN	_	_	4	obj	_	_
+6	ي	_	PRON	_	_	5	nmod	_	_
+7	.	_	PUNCT	_	_	4	punct	_	_
+
+
+
+# text = كان:<VERB> آدم:<PROPN> ل:<CCONJ> ينقل:<VERB> إلى:<ADP> الحياة:<NOUN> الأبدية:<ADJ> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (S (VP (V2 كان) (NP (PN آدم)))) (VP_conj (Conj ل) (VP (V ينقل) (NP_obl (Prep إلى) (NP (CN (CN (N الحياة)) (AP (A الأبدية))))))))) (Punct '.'))
+# weight = 3.125000000000002e-10
+1	كان	_	VERB	_	_	0	root	_	_
+2	آدم	_	PROPN	_	_	1	obj	_	_
+3	ل	_	CCONJ	_	_	4	cc	_	_
+4	ينقل	_	VERB	_	_	1	conj	_	_
+5	إلى	_	ADP	_	_	6	case	_	_
+6	الحياة	_	NOUN	_	_	4	obl	_	_
+7	الأبدية	_	ADJ	_	_	6	amod	_	_
+8	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = تحللت:<VERB> الأغلفة:<NOUN> و:<CCONJ> كان:<VERB> يجب:<VERB> استبدال:<NOUN> ها:<PRON> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (S (VP (V2 تحللت) (NP (CN (N الأغلفة))))) (VP_conj (Conj و) (VP (cop كان) (V2 يجب) (NP (N استبدال) (NP_poss (Pron_poss ها))))))) (Punct '.'))
+# weight = 1.250000000000001e-9
+1	تحللت	_	VERB	_	_	0	root	_	_
+2	الأغلفة	_	NOUN	_	_	1	obj	_	_
+3	و	_	CCONJ	_	_	5	cc	_	_
+4	كان	_	AUX	_	_	5	cop	_	_
+5	يجب	_	VERB	_	_	1	conj	_	_
+6	استبدال	_	NOUN	_	_	5	obj	_	_
+7	ها	_	PRON	_	_	6	nmod	_	_
+8	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = كانت:<AUX> مغتاظة:<ADJ> من:<ADP> أن:<PART> هذه:<DET> الفتاة:<NOUN> الوقحة:<ADJ> قد:<PART> تجرؤ:<VERB> و:<CCONJ> تجعل:<VERB> من:<ADP> ها:<PRON> أضحوكة:<NOUN> أمام:<ADP> الفصل:<NOUN> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (S (cop كانت) (AP (A مغتاظة)) (VP (Prep من) (that أن) (NP (Det هذه) (CN (CN (N الفتاة)) (AP (A الوقحة)))) (part قد) (V تجرؤ) (VP_conj (Conj و) (VP (V تجعل) (NP_obl (Prep من) (NP (Pron ها))))))) (NP (CN (N أضحوكة))) (Adv (Prep أمام) (NP (CN (N الفصل)))))) (Punct '.'))
+# weight = 2.500000000000003e-18
+1	كانت	_	AUX	_	_	2	cop	_	_
+2	مغتاظة	_	ADJ	_	_	0	root	_	_
+3	من	_	ADP	_	_	9	mark	_	_
+4	أن	_	SCONJ	_	_	9	mark	_	_
+5	هذه	_	DET	_	_	6	det	_	_
+6	الفتاة	_	NOUN	_	_	9	nsubj	_	_
+7	الوقحة	_	ADJ	_	_	6	amod	_	_
+8	قد	_	PART	_	_	9	compound:prt	_	_
+9	تجرؤ	_	VERB	_	_	2	ccom	_	_
+10	و	_	CCONJ	_	_	11	cc	_	_
+11	تجعل	_	VERB	_	_	9	conj	_	_
+12	من	_	ADP	_	_	13	case	_	_
+13	ها	_	PRON	_	_	11	obl	_	_
+14	أضحوكة	_	NOUN	_	_	2	obj	_	_
+15	أمام	_	ADP	_	_	16	case	_	_
+16	الفصل	_	NOUN	_	_	2	advmod	_	_
+17	.	_	PUNCT	_	_	2	punct	_	_
+
+
+
+# text = الفوز:<NOUN> الساحق:<ADJ> الذي:<DET> حقق:<VERB> ه:<PRON> في:<ADP> المجمع:<NOUN> الانتخابي:<ADJ> غطى:<VERB> على:<ADP> فوز:<NOUN> ه:<PRON> الخجول:<ADJ> ب:<ADP> حصول:<NOUN> ه:<PRON> على:<ADP> 43:<NUM> %:<SYM> فقط:<ADV> من:<ADP> الأصوات:<NOUN> الشعبية:<ADJ> .:<PUNCT>
+# analyses = 2
+# parsetree = (Chunks (ListS (S (NP (NP (CN (CN (N الفوز)) (AP (A الساحق)))) (NP (Det الذي))) (V2 حقق) (S (NP (Pron ه)) (Adv (Prep في) (NP (CN (CN (N المجمع)) (AP (A الانتخابي))))) (VP (V غطى) (NP_obl (Prep على) (NP (CN (N فوز))) (NP_poss (Pron_poss ه))))))) (Utt (Utt (AP (AP (A الخجول)) (NP_obl (Prep ب) (NP (NP (NP (CN (N حصول))) (NP (Pron ه))) (NP_obl (Prep على) (NP_symp (Num (Card '43')) (Symb '%')) (Adv فقط) (NP_obl (Prep من) (NP (CN (CN (N الأصوات)) (AP (A الشعبية)))))))))) (Punct '.')))
+# weight = 1.220703125000003e-33
+1	الفوز	_	NOUN	_	_	4	nsubj	_	_
+2	الساحق	_	ADJ	_	_	1	amod	_	_
+3	الذي	_	DET	_	_	1	nmod	_	_
+4	حقق	_	VERB	_	_	0	root	_	_
+5	ه	_	PRON	_	_	9	nsubj	_	_
+6	في	_	ADP	_	_	7	case	_	_
+7	المجمع	_	NOUN	_	_	9	advmod	_	_
+8	الانتخابي	_	ADJ	_	_	7	amod	_	_
+9	غطى	_	VERB	_	_	4	obj	_	_
+10	على	_	ADP	_	_	11	case	_	_
+11	فوز	_	NOUN	_	_	9	obl	_	_
+12	ه	_	PRON	_	_	11	nmod	_	_
+13	الخجول	_	ADJ	_	_	4	dep	_	_
+14	ب	_	ADP	_	_	15	case	_	_
+15	حصول	_	NOUN	_	_	13	nmod	_	_
+16	ه	_	PRON	_	_	15	nmod	_	_
+17	على	_	ADP	_	_	19	case	_	_
+18	43	_	NUM	_	_	19	nummod	_	_
+19	%	_	SYM	_	_	15	nmod	_	_
+20	فقط	_	ADV	_	_	19	advmod	_	_
+21	من	_	ADP	_	_	22	case	_	_
+22	الأصوات	_	NOUN	_	_	19	obl	_	_
+23	الشعبية	_	ADJ	_	_	22	amod	_	_
+24	.	_	PUNCT	_	_	13	punct	_	_
+
+
+
+# text = تحمل:<VERB> قوات:<NOUN> الولايات:<NOUN> المتحدة:<ADJ> الآن:<ADV> أتروبين:<PROPN> و:<CCONJ> حاقنات:<NOUN> آلية:<ADJ> في:<ADP> معدات:<NOUN> الإسعافات:<NOUN> الأولية:<ADJ> ل:<ADP> استخدام:<NOUN> ها:<PRON> في:<ADP> حالة:<NOUN> التسمم:<NOUN> ب:<ADP> غاز:<NOUN> الأعصاب:<NOUN> الفوسفاتي:<ADJ> العضوي:<ADJ> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (S (S (VP (V تحمل))) (NP (NP (CN (N قوات))) (NP (CN (CN (N الولايات)) (AP (A المتحدة))))) (Adv الآن)) (NP (NP (PN أتروبين)) (NP_conj (Conj و) (NP (CN (CN (N حاقنات)) (AP (A آلية)))))) (Adv (Prep في) (NP (NP (NP (CN (N معدات))) (NP (CN (CN (N الإسعافات)) (AP (A الأولية))))) (NP_obl (Prep ل) (NP (NP (NP (CN (N استخدام))) (NP (Pron ها))) (NP_obl (Prep في) (NP (NP (NP (CN (N حالة))) (NP (CN (N التسمم)))) (NP_obl (Prep ب) (NP (NP (CN (N غاز))) (NP (CN (CN (CN (N الأعصاب)) (AP (A الفوسفاتي))) (AP (A العضوي)))))))))))))) (Punct '.'))
+# weight = 7.450580596923843e-34
+1	تحمل	_	VERB	_	_	0	root	_	_
+2	قوات	_	NOUN	_	_	1	obj	_	_
+3	الولايات	_	NOUN	_	_	2	nmod	_	_
+4	المتحدة	_	ADJ	_	_	3	amod	_	_
+5	الآن	_	ADV	_	_	1	advmod	_	_
+6	أتروبين	_	PROPN	_	_	1	obj	_	_
+7	و	_	CCONJ	_	_	8	cc	_	_
+8	حاقنات	_	NOUN	_	_	6	conj	_	_
+9	آلية	_	ADJ	_	_	8	amod	_	_
+10	في	_	ADP	_	_	11	case	_	_
+11	معدات	_	NOUN	_	_	1	advmod	_	_
+12	الإسعافات	_	NOUN	_	_	11	nmod	_	_
+13	الأولية	_	ADJ	_	_	12	amod	_	_
+14	ل	_	ADP	_	_	15	case	_	_
+15	استخدام	_	NOUN	_	_	11	nmod	_	_
+16	ها	_	PRON	_	_	15	nmod	_	_
+17	في	_	ADP	_	_	18	case	_	_
+18	حالة	_	NOUN	_	_	15	nmod	_	_
+19	التسمم	_	NOUN	_	_	18	nmod	_	_
+20	ب	_	ADP	_	_	21	case	_	_
+21	غاز	_	NOUN	_	_	18	nmod	_	_
+22	الأعصاب	_	NOUN	_	_	21	nmod	_	_
+23	الفوسفاتي	_	ADJ	_	_	22	amod	_	_
+24	العضوي	_	ADJ	_	_	22	amod	_	_
+25	.	_	PUNCT	_	_	1	punct	_	_
+
+
+
+# text = هو:<PRON> قد:<PART> ينجز:<VERB> ب:<ADP> الدهاء:<NOUN> على:<ADP> المدى:<NOUN> الطويل:<ADJ> ما:<DET> لا:<PART> يستطيع:<VERB> إنجاز:<NOUN> ه:<PRON> ب:<ADP> العنف:<NOUN> و:<CCONJ> القوة:<NOUN> على:<ADP> المدى:<NOUN> القصير:<ADJ> .:<PUNCT>
+# analyses = 10
+# parsetree = (Utt (Utt (S (S (NP (Pron هو)) (VP (part قد) (V2 ينجز))) (VP (Adv (Prep ب) (NP (CN (N الدهاء)))) (VP (Adv (Prep على) (NP (NP (CN (CN (N المدى)) (AP (A الطويل)))) (NP (Det ما)))) (VP (part لا) (V2 يستطيع) (NP (NP (CN (N إنجاز))) (NP (Pron ه)))))) (NP_obl (Prep ب) (NP (NP (CN (N العنف))) (NP_conj (Conj و) (NP (CN (N القوة)))))) (NP_obl (Prep على) (NP (CN (CN (N المدى)) (AP (A القصير))))))) (Punct '.'))
+# weight = 1.2207031250000025e-26
+1	هو	_	PRON	_	_	3	nsubj	_	_
+2	قد	_	PART	_	_	3	mark	_	_
+3	ينجز	_	VERB	_	_	11	nsubj	_	_
+4	ب	_	ADP	_	_	5	case	_	_
+5	الدهاء	_	NOUN	_	_	11	advmod	_	_
+6	على	_	ADP	_	_	7	case	_	_
+7	المدى	_	NOUN	_	_	11	advmod	_	_
+8	الطويل	_	ADJ	_	_	7	amod	_	_
+9	ما	_	DET	_	_	7	nmod	_	_
+10	لا	_	PART	_	_	11	mark	_	_
+11	يستطيع	_	VERB	_	_	0	root	_	_
+12	إنجاز	_	NOUN	_	_	11	obj	_	_
+13	ه	_	PRON	_	_	12	nmod	_	_
+14	ب	_	ADP	_	_	15	case	_	_
+15	العنف	_	NOUN	_	_	11	obl	_	_
+16	و	_	CCONJ	_	_	17	cc	_	_
+17	القوة	_	NOUN	_	_	15	conj	_	_
+18	على	_	ADP	_	_	19	case	_	_
+19	المدى	_	NOUN	_	_	11	obl	_	_
+20	القصير	_	ADJ	_	_	19	amod	_	_
+21	.	_	PUNCT	_	_	11	punct	_	_
+
+
+
+# text = أحد:<NOUN> هم:<PRON> قال:<VERB> أن:<SCONJ> فقط:<ADV> مجتمعًا:<NOUN> هرميًا:<ADJ> تترأس:<VERB> ه:<PRON> طبقة:<NOUN> مرفهة:<ADJ> يمكن:<VERB> ه:<PRON> إنتاج:<NOUN> أعمال:<NOUN> فنية:<ADJ> .:<PUNCT>
+# analyses = 2
+# parsetree = (Chunks (ListS (S (NP (NP (CN (N أحد))) (NP (Pron هم))) (VP (V قال)) (S_that (that أن) (Adv فقط) (NP (CN (CN (N مجتمعًا)) (AP (A هرميًا)))) (VP (V2 تترأس) (NP (NP (Pron ه)) (NP (CN (CN (N طبقة)) (AP (A مرفهة))))))))) (S_front (S (VP (V2 يمكن) (NP (NP (Pron ه)) (NP (NP (CN (N إنتاج))) (NP (CN (CN (N أعمال)) (AP (A فنية)))))))) (comma '.')))
+# weight = 6.103515625000009e-26
+1	أحد	_	NOUN	_	_	3	nsubj	_	_
+2	هم	_	PRON	_	_	1	nmod	_	_
+3	قال	_	VERB	_	_	0	root	_	_
+4	أن	_	SCONJ	_	_	6	mark	_	_
+5	فقط	_	ADV	_	_	6	advmod	_	_
+6	مجتمعًا	_	NOUN	_	_	3	obj	_	_
+7	هرميًا	_	ADJ	_	_	6	amod	_	_
+8	تترأس	_	VERB	_	_	6	acl	_	_
+9	ه	_	PRON	_	_	8	obj	_	_
+10	طبقة	_	NOUN	_	_	9	nmod	_	_
+11	مرفهة	_	ADJ	_	_	10	amod	_	_
+12	يمكن	_	VERB	_	_	3	dep	_	_
+13	ه	_	PRON	_	_	12	obj	_	_
+14	إنتاج	_	NOUN	_	_	13	nmod	_	_
+15	أعمال	_	NOUN	_	_	14	nmod	_	_
+16	فنية	_	ADJ	_	_	15	amod	_	_
+17	.	_	PUNCT	_	_	12	punct	_	_
+
+
+
+# text = تفسير:<NOUN> ه:<PRON> الساذج:<ADJ> ب:<ADP> أن:<SCONJ> ه:<PRON> لم:<PART> يكن:<VERB> ل:<PART> يحرق:<VERB> الكنيسة:<NOUN> لو:<CCONJ> لم:<PART> يكن:<VERB> يظن:<VERB> أن:<SCONJ> الأسقف:<NOUN> كان:<AUX> موجودًا:<ADJ> بداخل:<ADP> ها:<PRON> .:<PUNCT>
+# analyses = 5
+# parsetree = (Chunks (ListNP (NP (NP (CN (N تفسير))) (NP (Pron ه)))) (A الساذج) (SC (S_that (Prep ب) (that أن) (NP (Pron ه)) (S (VP (part لم) (V2 يكن))))) (ListS (S (VP (ListVP (VP (part ل) (V2 يحرق) (NP (CN (N الكنيسة))))) (VP_conj (Conj لو) (VP (part لم) (V2 يكن)))))) (S_front (S (VP (V يظن)) (S_that (that أن) (NP (CN (N الأسقف))) (S (cop كان) (AP (A موجودًا)) (NP_obl (Prep بداخل) (NP (Pron ها)))))) (comma '.')))
+# weight = 7.812500000000014e-29
+1	تفسير	_	NOUN	_	_	0	root	_	_
+2	ه	_	PRON	_	_	1	nmod	_	_
+3	الساذج	_	ADJ	_	_	1	dep	_	_
+4	ب	_	ADP	_	_	8	mark	_	_
+5	أن	_	SCONJ	_	_	8	mark	_	_
+6	ه	_	PRON	_	_	8	nsubj	_	_
+7	لم	_	PART	_	_	8	mark	_	_
+8	يكن	_	VERB	_	_	1	dep	_	_
+9	ل	_	PART	_	_	10	mark	_	_
+10	يحرق	_	VERB	_	_	1	dep	_	_
+11	الكنيسة	_	NOUN	_	_	10	obj	_	_
+12	لو	_	CCONJ	_	_	14	cc	_	_
+13	لم	_	PART	_	_	14	mark	_	_
+14	يكن	_	VERB	_	_	10	conj	_	_
+15	يظن	_	VERB	_	_	1	dep	_	_
+16	أن	_	SCONJ	_	_	19	mark	_	_
+17	الأسقف	_	NOUN	_	_	19	nsubj	_	_
+18	كان	_	AUX	_	_	19	cop	_	_
+19	موجودًا	_	ADJ	_	_	15	nsubj	_	_
+20	بداخل	_	ADP	_	_	21	case	_	_
+21	ها	_	PRON	_	_	19	obl	_	_
+22	.	_	PUNCT	_	_	15	punct	_	_
+
+
+

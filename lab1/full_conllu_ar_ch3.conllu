@@ -15,7 +15,7 @@
 1	تمر	_	VERB	_	_	0	root	_	_
 2	ب	_	ADP	_	_	3	case	_	_
 3	سرعة	_	NOUN	_	_	1	obl	_	_
-4	بلدة	_	NOUN	_	_	3	nmod	_	_
+4	بلدة	_	NOUN	_	_	1	nsubj	_	_
 5	صغيرة	_	ADJ	_	_	4	amod	_	_
 6	بمئذنتين	_	ADJ	_	_	4	amod	_	_
 7	.	_	PUNCT	_	_	1	punct	_	_
@@ -43,7 +43,7 @@
 5	عقوبات	_	NOUN	_	_	1	obj	_	_
 6	غير	_	NOUN	_	_	5	nmod	_	_
 7	تقليدية	_	ADJ	_	_	6	amod	_	_
-8	سابقًا	_	ADJ	_	_	1	obl	_	_
+8	سابقًا	_	ADV	_	_	1	advmod	_	_
 9	.	_	PUNCT	_	_	1	punct	_	_
 
 # sent_id = 5
@@ -74,7 +74,7 @@
 8	نيسان	_	NOUN	_	_	2	obl	_	_
 9	و	_	CCONJ	_	_	11	cc	_	_
 10	حتى	_	ADP	_	_	11	case	_	_
-11	حزيران	_	NOUN	_	_	8	obl	_	_
+11	حزيران	_	NOUN	_	_	8	conj	_	_
 12	.	_	PUNCT	_	_	2	punct	_	_
 
 # sent_id = 7
@@ -96,11 +96,11 @@
 
 # sent_id = 8
 # text = أخبر شاهد الشرطة أن الضحية هاجم المشتبه به في شهر نيسان.
-# text = أخبر شاهد الشرطة أن الضحية هاجم المشتبه به في شهر نيسان.
-# text = A witness told police that the victim had attacked the suspect in April.
+# original_text = أخبر شاهد الشرطة أن الضحية هاجم المشتبه به في شهر نيسان.
+# text_en = A witness told police that the victim had attacked the suspect in April.
 1	أخبر	_	VERB	_	_	0	root	_	_
 2	شاهد	_	NOUN	_	_	1	nsubj	_	_
-3	الشرطة	_	NOUN	_	_	2	nmod	_	_
+3	الشرطة	_	NOUN	_	_	1	obj	_	_
 4	أن	_	SCONJ	_	_	6	mark	_	_
 5	الضحية	_	NOUN	_	_	6	nsubj	_	_
 6	هاجم	_	VERB	_	_	1	ccomp	_	_
@@ -116,31 +116,32 @@
 # text = يكون بقمة وضوحه عندما يكون اسم الشخص المشهور في البداية نادرًا جدًا.
 # original_text = يكون بقمة وضوحه عندما يكون اسم الشخص المشهور في البداية نادرًا جدًا.
 # text_en = It's most obvious when a celebrity's name is initially quite rare.
-1	يكون	_	AUX	_	_	3	cop	_	_
-2	بقمة	_	ADV	_	_	3	advcl	_	_
-3	وضوح	_	NOUN	_	_	0	root	_	_
-4	ه	_	PRON	_	_	3	nmod	_	_
-5	عندما	_	CCONJ	_	_	12	mark	_	_
-6	يكون	_	AUX	_	_	3	ccomp	_	_
-7	اسم	_	NOUN	_	_	12	nsubj	_	_
-8	الشخص	_	NOUN	_	_	7	nmod	_	_
-9	المشهور	_	ADJ	_	_	8	amod	_	_
-10	في	_	ADP	_	_	11	case	_	_
-11	البداية	_	NOUN	_	_	6	obl	_	_
-12	نادرًا	_	ADV	_	_	6	advcl	_	_
-13	جدًا	_	NOUN	_	_	12	obl	_	_
-14	.	_	PUNCT	_	_	3	punct	_	_
+1	يكون	_	AUX	_	_	4	cop	_	_
+2	ب	_	ADP	_	_	3	case	_	_
+3	قمة	_	NOUN	_	_	4	obl	_	_
+4	وضوح	_	NOUN	_	_	0	root	_	_
+5	ه	_	PRON	_	_	4	nmod	_	_
+6	عندما	_	CCONJ	_	_	13	cc	_	_
+7	يكون	_	AUX	_	_	4	ccomp	_	_
+8	اسم	_	NOUN	_	_	13	nsubj	_	_
+9	الشخص	_	NOUN	_	_	8	nmod	_	_
+10	المشهور	_	ADJ	_	_	9	amod	_	_
+11	في	_	ADP	_	_	12	case	_	_
+12	البداية	_	NOUN	_	_	7	obl	_	_
+13	نادرًا	_	ADV	_	_	7	advcl	_	_
+14	جدًا	_	NOUN	_	_	13	obl	_	_
+15	.	_	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 10
 # text = هذا لم يوقف المستثمرين عن الاحتشاد لوضع أموالهم في صناديق الادخار.
 # original_text = هذا لم يوقف المستثمرين عن الاحتشاد لوضع أموالهم في صناديق الادخار.
 # text_en = This has not stopped investors flocking to put their money in the funds.
 1	هذا	_	PRON	_	_	3	nsubj	_	_
-2	لم	_	PART	_	_	3	advmod	_	_
+2	لم	_	PART	_	_	3	mark	_	_
 3	يوقف	_	VERB	_	_	0	root	_	_
-4	المستثمرين	_	NOUN	_	_	3	nsubj	_	_
+4	المستثمرين	_	NOUN	_	_	3	obj	_	_
 5	عن	_	ADP	_	_	6	case	_	_
-6	الاحتشاد	_	NOUN	_	_	3	obl:arg	_	_
+6	الاحتشاد	_	NOUN	_	_	3	obl	_	_
 7	ل	_	ADP	_	_	8	case	_	_
 8	وضع	_	NOUN	_	_	6	nmod	_	_
 9	أموال	_	NOUN	_	_	8	nmod	_	_
@@ -152,24 +153,25 @@
 
 # sent_id = 11
 # text = هذا الخلاف بين البيانات الاقتصادية والخطاب السياسي أمر مألوف أو ينبغي أن يكون كذلك.
-# original_text = هذا الخلاف بين البيانات الاقتصادية والخطاب السياسي أمر مألوف أو ينبغي أن يكون كذلك.
+# original_text = هذا الخلاف بين البيانات الاقتصادية والخطاب السياسي أمر مألوف، أو ينبغي أن يكون كذلك.
 # text_en = This discordance between economic data and political rhetoric is familiar, or should be.
 1	هذا	_	DET	_	_	2	det	_	_
 2	الخلاف	_	NOUN	_	_	9	nsubj	_	_
 3	بين	_	ADP	_	_	4	case	_	_
-4	البيانات	_	NOUN	_	_	2	nmod	_	_
+4	البيانات	_	NOUN	_	_	3	nmod	_	_
 5	الاقتصادية	_	ADJ	_	_	4	amod	_	_
 6	و	_	CCONJ	_	_	7	cc	_	_
 7	الخطاب	_	NOUN	_	_	4	conj	_	_
 8	السياسي	_	ADJ	_	_	4	amod	_	_
 9	أمر	_	NOUN	_	_	0	root	_	_
 10	مألوف	_	ADJ	_	_	9	amod	_	_
-11	أو	_	CCONJ	_	_	11	cc	_	_
-12	ينبغي	_	VERB	_	_	9	conj	_	_
-13	أن	_	SCONJ	_	_	13	mark	_	_
-14	يكون	_	VERB	_	_	12	csubj	_	_
-15	كذلك	_	ADV	_	_	14	advmod:emph	_	_
-16	.	_	PUNCT	_	_	9	punct	_	_
+11	,	ـ	PUNCT	ـ	_	9	punct	_	_
+12	أو	_	CCONJ	_	_	13	cc	_	_
+13	ينبغي	_	AUX	_	_	9	ccomp	_	_
+14	أن	_	PART	_	_	15	mark	_	_
+15	يكون	_	AUX	_	_	13	csubj	_	_
+16	كذلك	_	ADV	_	_	15	advmod	_	_
+17	.	_	PUNCT	_	_	9	punct	_	_
 
 # sent_id = 12
 # text = تقدر دراسة الجدوى أن الركاب سيستغرقون حوالي أربع دقائق لعبور نهر بوتوماك على الجندول.
@@ -189,7 +191,7 @@
 12	نهر	_	NOUN	_	_	11	nmod	_	_
 13	بوتوماك	_	PROPN	_	_	12	flat	_	_
 14	على	_	ADP	_	_	15	case	_	_
-15	الجندول	_	NOUN	_	_	11	obl	_	_
+15	الجندول	_	NOUN	_	_	11	nmod	_	_
 16	.	_	PUNCT	_	_	1	punct	_	_
 
 # sent_id = 13
@@ -220,7 +222,7 @@
 5	تصل	_	VERB	_	_	4	acl	_	_
 6	ل	_	ADP	_	_	7	case	_	_
 7	خمس	_	NUM	_	_	8	nummod	_	_
-8	سنوات	_	NOUN	_	_	7	nmod	_	_
+8	سنوات	_	NOUN	_	_	5	nmod	_	_
 9	في	_	ADP	_	_	9	case	_	_
 10	السجن	_	NOUN	_	_	5	obl	_	_
 11	.	_	PUNCT	_	_	3	punct	_	_
@@ -233,7 +235,7 @@
 2	توصيل	_	NOUN	_	_	1	nsubj	_	_
 3	الأخبار	_	NOUN	_	_	2	nmod	_	_
 4	إلى	_	ADP	_	_	5	case	_	_
-5	كل	_	NOUN	_	_	2	obl	_	_
+5	كل	_	NOUN	_	_	2	nmod	_	_
 6	قرية	_	NOUN	_	_	5	nmod	_	_
 7	في	_	ADP	_	_	8	case	_	_
 8	المقاطعة	_	NOUN	_	_	6	nmod	_	_
@@ -245,9 +247,10 @@
 # text_en = I carry these thoughts in the back of my head
 1	هذه	_	DET	_	_	2	det	_	_
 2	الأفكار	_	NOUN	_	_	4	nsubj	_	_
-3	لا	_	PART	_	_	4	advmod	_	_
+3	لا	_	PART	_	_	4	mark	_	_
 4	تبارح	_	VERB	_	_	0	root	_	_
-5	رأسي	_	ADJ	_	_	4	obj	_	_
+5	رأس	_	Noun	_	_	4	obj	_	_
+5	ي	_	Pron	_	_	4	nmod	_	_
 6	.	_	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 17
@@ -284,7 +287,7 @@
 1	كانت	_	AUX	_	_	2	cop	_	_
 2	مغتاظة	_	ADJ	_	_	0	root	_	_
 3	من	_	ADP	_	_	9	mark	_	_
-4	أن	_	SCONJ	_	_	9	mark	_	_
+4	أن	_	PART	_	_	9	mark	_	_
 5	هذه	_	DET	_	_	6	det	_	_
 6	الفتاة	_	NOUN	_	_	9	nsubj	_	_
 7	الوقحة	_	ADJ	_	_	6	amod	_	_
@@ -296,7 +299,7 @@
 13	ها	_	PRON	_	_	11	obl	_	_
 14	أضحوكة	_	NOUN	_	_	11	obj	_	_
 15	أمام	_	ADP	_	_	16	case	_	_
-16	الفصل	_	NOUN	_	_	14	nmod	_	_
+16	الفصل	_	NOUN	_	_	11	nmod	_	_
 17	.	_	PUNCT	_	_	2	punct	_	_
 
 # sent_id = 20
@@ -320,8 +323,8 @@
 15	حصول	_	NOUN	_	_	11	obl	_	_
 16	ه	_	PRON	_	_	15	nmod	_	_
 17	على	_	ADP	_	_	18	case	_	_
-18	43	_	NUM	_	_	15	nummod	_	_
-19	%	_	SYM	_	_	18	nmod	_	_
+18	43	_	NUM	_	_	19	nummod	_	_
+19	%	_	SYM	_	_	18	obl	_	_
 20	فقط	_	ADV	_	_	18	advmod	_	_
 21	من	_	ADP	_	_	22	case	_	_
 22	الأصوات	_	NOUN	_	_	18	nmod	_	_
@@ -344,7 +347,7 @@
 10	في	_	ADP	_	_	11	case	_	_
 11	معدات	_	NOUN	_	_	1	obl	_	_
 12	الإسعافات	_	NOUN	_	_	11	nmod	_	_
-13	الأولية	_	ADJ	_	_	11	amod	_	_
+13	الأولية	_	ADJ	_	_	12	amod	_	_
 14	ل	_	ADP	_	_	15	case	_	_
 15	استخدام	_	NOUN	_	_	1	obl	_	_
 16	ها	_	PRON	_	_	15	nmod	_	_
@@ -352,7 +355,7 @@
 18	حالة	_	NOUN	_	_	15	nmod	_	_
 19	التسمم	_	NOUN	_	_	18	nmod	_	_
 20	ب	_	ADP	_	_	21	case	_	_
-21	غاز	_	NOUN	_	_	19	obl	_	_
+21	غاز	_	NOUN	_	_	19	nmod	_	_
 22	الأعصاب	_	NOUN	_	_	20	nmod	_	_
 23	الفوسفاتي	_	ADJ	_	_	21	amod	_	_
 24	العضوي	_	ADJ	_	_	21	amod	_	_
@@ -370,17 +373,17 @@
 6	على	_	ADP	_	_	7	case	_	_
 7	المدى	_	NOUN	_	_	3	obl	_	_
 8	الطويل	_	ADJ	_	_	7	amod	_	_
-9	ما	_	DET	_	_	11	obl	_	_
-10	لا	_	PART	_	_	11	advmod	_	_
-11	يستطيع	_	VERB	_	_	3	conj	_	_
+9	ما	_	DET	_	_	3	obj	_	_
+10	لا	_	PART	_	_	11	mark	_	_
+11	يستطيع	_	VERB	_	_	3	ccomp	_	_
 12	إنجاز	_	NOUN	_	_	11	obj	_	_
-13	ه	_	PRON	_	_	8	nmod	_	_
+13	ه	_	PRON	_	_	12	nmod	_	_
 14	ب	_	ADP	_	_	15	case	_	_
 15	العنف	_	NOUN	_	_	12	nmod	_	_
 16	و	_	CCONJ	_	_	17	cc	_	_
 17	القوة	_	NOUN	_	_	15	conj	_	_
 18	على	_	ADP	_	_	19	case	_	_
-19	المدى	_	NOUN	_	_	12	obl	_	_
+19	المدى	_	NOUN	_	_	12	nmod	_	_
 20	القصير	_	ADJ	_	_	19	amod	_	_
 21	.	_	PUNCT	_	_	3	punct	_	_
 
@@ -418,18 +421,18 @@
 6	ه	_	PRON	_	_	8	nsubj	_	_
 7	لم	_	PART	_	_	8	advmod	_	_
 8	يكن	_	VERB	_	_	1	ccomp	_	_
-9	ل	_	CCONJ	_	_	10	mark	_	_
+9	ل	_	PART	_	_	10	mark	_	_
 10	يحرق	_	VERB	_	_	8	advcl	_	_
 11	الكنيسة	_	NOUN	_	_	10	obj	_	_
 12	لو	_	CCONJ	_	_	14	mark	_	_
 13	لم	_	PART	_	_	14	advmod	_	_
 14	يكن	_	VERB	_	_	8	advcl	_	_
-15	يظن	_	VERB	_	_	14	acl:relcl	_	_
+15	يظن	_	VERB	_	_	14	advcl	_	_
 16	أن	_	SCONJ	_	_	19	mark	_	_
 17	الأسقف	_	NOUN	_	_	18	nsubj	_	_
 18	كان	_	AUX	_	_	19	cop	_	_
 19	موجودًا	_	ADJ	_	_	15	ccomp	_	_
 20	بداخل	_	ADP	_	_	21	case	_	_
-21	ها	_	PRON	_	_	19	obl	_	_
+21	ها	_	PRON	_	_	19	nmod	_	_
 22	.	_	PUNCT	_	_	1	punct	_	_
 

@@ -42,7 +42,7 @@
 7	for	_	ADP	_	_	9	case	_	_
 8	unconventional	_	ADJ	_	_	9	amod	_	_
 9	penalties	_	NOUN	_	_	6	obl	_	_
-10	before	_	ADV	_	_	9	advmod	_	_
+10	before	_	ADV	_	_	6	advmod	_	_
 11	.	_	PUNCT	_	_	6	punct	_	_
 
 # sent_id = 5

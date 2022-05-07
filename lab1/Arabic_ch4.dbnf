@@ -1,0 +1,247 @@
+-- utterances and sentences
+Utt ::= Utt Punct        # head punct
+
+Utt ::= S
+Utt ::= QS
+Utt ::= Imp
+Utt ::= NP
+Utt ::= VP
+Utt ::= AP
+Utt ::= IP
+Utt ::= IAdv
+Utt ::= Num
+
+-- sentences
+S ::= VP
+S ::= NP V2 S # nsubj head obj
+S ::= VP S_that # head nsubj obj ccomp
+S ::= NP V NP_obl NP_obl # head acl obl obl
+S ::= NP Adv? VP # nsubj advmod head
+S ::= S VP NP_obl NP_obl # nsubj head obl obl 
+S ::= NP Det V Pron NP_obl # head det acl:relcl obj obl
+S ::= VP NP # head nsubj
+-- S ::= VP NP_obl # head obl
+S ::= VP Adv NP_obl # head advmod obl
+S ::= NP S_that # head ccomp
+S ::= VP_cop S_that # head ccomp
+S ::= VP_cop conj S # head cconj advcl 
+S ::= part VP NP VP_conj # obl head obj cc
+S ::= NP part VP NP_obl NP_obl Det S # nsubj compound:prt head obl obl obj ccomp
+S ::= NP_front SC # head ccomp
+S ::= NP_front VP_conj # head ccomp
+S ::= S NP Adv # head obj advmod
+S ::= NP VP S_that # nsubj head obj
+S ::= cop AP VP # cop head ccom
+S ::= cop AP NP_obl # cop head obl
+-- اختارت سابقًا
+S ::= NP neg VP  # nsubj advmod head
+S ::= VP NP_obl NP_obl # head obl obl
+S ::= S VP_conj # head conj
+S ::= VP NP S_front # head nsubj ccomp
+S ::= NP NP_obl NP_obl # head obl obl
+S ::= cop Adv VP_conj # cop head ccomp
+
+
+-- embedded sentences
+SC ::= S_that
+SC ::= QS
+SC ::= conj aux VP_to # cc head csubj
+
+VP_to ::= neg? to cop Adv # advmod mark head advmod
+
+
+S_that ::= that NP V2 NP NP_obl # mark nsubj head obj obl 
+S_that ::= Prep? that NP S # mark mark nsubj head
+S_that ::= that Adv NP VP # mark advmod head acl acl
+S_front ::= S comma # head punct
+S_front ::= quote S quote colon # punct head punct punct
+
+
+QS ::= IP NP Punct # head nmod punct
+
+
+-- verb phrases
+
+VP ::= V
+VP ::= part V2 # mark head
+VP ::= cop? part? V2 NP # cop mark head obj
+VP ::= aux be_V # aux head
+VP ::= aux # # 0.001
+VP ::= Adv VP # advmod head
+VP ::= V NP_obl NP_obl? # head obl obl
+VP ::= V2 Pron NP # head obj nsubj
+VP ::= V2 NP adv NP NP_obl # head nsubj advmod obj obl
+VP ::= V2 NP NP # head nsubj obj
+VP ::= Prep that NP part V VP_conj # mark mark nsubj compound:prt head conj
+
+
+-- noun phrases
+NP ::= PN
+NP ::= Pron
+NP ::= Num # # 0.1
+NP ::= Det # # 0.1
+
+NP ::= Det? CN # det head
+NP ::= NP comma? NP_obl # head punct nmod
+NP ::= NP comma? NP_obl # head punct obl
+NP ::= NP NP # head nmod
+NP ::= NP NP # advcl head
+NP ::= NP NP_conj # head conj
+NP ::= Adv? Num NP # advmod nummod head
+NP ::= N NP_poss # head nmod
+
+NP_front ::= NP CN comma # nsubj head punct
+
+
+-- NP_poss ::= NP 's # head nmod
+NP_poss ::= Pron_poss
+
+NP_symp ::= Symb Num # head nummod
+NP_symp ::= Num Symb # nummod head
+NP_obl ::= Prep Prep? NP NP_poss? # case fixed head nmod
+NP_obl ::= Prep NP NP_conj # case head conj
+NP_obl ::= Prep NP_symp Adv? NP_obl # case head advmod obl
+
+
+PN ::= PN_one PN # head flat
+
+CN ::= N
+CN ::= CN AP # head amod
+-- حذاء موحل
+-- غير تقليدية
+
+CN ::= CN comma? AP # head punct amod # 0.01
+
+IP ::= IDet CN # det head
+
+-- adjectival phrases
+AP ::= A
+AP ::= AdA AP     # advmod head
+AP ::= AP NP_obl  # head nmod
+AP ::= A CN # amod head
+-- ذي حذاء
+
+Adv ::= Prep NP # case head
+Adv ::= Adv Adv # head obl
+
+
+-- some very special rules ---
+NP        ::= Det CN_quoted # det head
+CN_quoted ::= quote CN quote # punct head punct
+NP        ::= NP NP_appos # head appos # 0.01
+NP_appos  ::= Punct_appos NP # punct head
+
+Num ::= Card
+Num ::= Digits
+
+-- N ::= N_one N # compound head
+N ::= PN CN # compound head
+
+-- coordination
+S       ::= Conj_pre? ListS S_conj # cc:preconj head conj
+ListS   ::= S
+ListS   ::= ListS S_comma # head conj
+S_conj  ::= comma? Conj S # punct cc head
+-- SC_conj  ::= comma? Conj SC # punct cc head
+S_comma ::= comma S # punct head
+
+NP       ::= Conj_pre? ListNP NP_conj # cc:preconj head conj
+ListNP   ::= NP
+ListNP   ::= ListNP NP_comma # head conj
+NP_conj  ::= comma? Conj NP # punct cc head
+NP_comma ::= comma NP # punct head
+
+AP       ::= Conj_pre? ListAP AP_conj # cc:preconj head conj
+ListAP   ::= AP
+ListAP   ::= ListAP AP_comma # head conj
+AP_conj  ::= comma? Conj AP # punct cc head
+AP_comma ::= comma AP # punct head
+
+VP       ::= Conj_pre? ListVP VP_conj # cc:preconj head conj
+ListVP   ::= VP
+ListVP   ::= ListVP VP_comma # head conj
+VP_conj  ::= comma? Conj VP # punct cc head
+VP_comma ::= comma VP # punct head
+
+
+
+Adv       ::= Conj_pre? ListAdv Adv_conj # cc:preconj head conj
+ListAdv   ::= Adv
+ListAdv   ::= ListAdv Adv_comma # head conj
+Adv_conj  ::= comma? Conj Adv # punct cc head
+Adv_conj  ::= comma? Conj Adv NP # punct cc advcl head
+Adv_conj  ::= comma? Conj NP_obl # punct cc head
+Adv_comma ::= comma Adv # punct head
+Adv_comma ::= comma NP_obl # punct head
+
+
+-- POS tag configurations
+#pos AUX cop do have aux
+#pos VERB V V2 V3 VS VV V2V V2C be_V
+#pos NOUN N N_one
+#pos ADJ A
+#pos PROPN PN PN_one
+#pos ADV Adv IAdv AdA AdV Predet neg
+#pos SCONJ Subj that if
+#pos CCONJ Conj Conj_pre
+#pos DET Det IDet
+#pos PRON Pron IP RP Pron_poss there it
+#pos PART to 's part
+#pos PUNCT Punct Punct_appos comma quote colon parenth
+#pos NUM Card Digits Card_one
+#pos ADP Prep
+#pos SYM Symb
+
+-- structural word lexicon: normal categories
+#token Prep مع
+#token IP مَن who whom what
+#token IAdv when where why
+#token AdA very too genetically
+#token AdV definitely always never
+#token Det هؤلاء a an the every some many no
+#token Pron I me you he him she her it we us they them
+#token Subj if when although because as
+#token aux ينبغي could must will would shall should
+#token Punct . ! ?
+#token Punct_appos , :
+#token Conj and or nor
+#token Conj_pre both either neither
+#token IDet which Who
+#token Pron_poss ه ك ي ها نا هم هما
+#token RP that who
+#token Card five
+#token part لا لقد قد
+
+-- structural word lexicon: syncategorematic words
+#token cop كان يكن يكون كن كنت كانت كنت كنا كانوا يكونوا يكونون تكون تكونان يكونان 
+#token be_V كان يكن يكون كن كنت كانت كنت كنا كانوا يكونوا يكونون تكون تكونان يكونان 
+#token do do does did
+#token have have has had
+#token neg not n't
+#token that أن
+#token to أن ل
+#token it it
+#token if if whether
+#token there there
+#token comma ,
+#token colon :
+#token quote "
+#token 's 's
+#token parenth ( ) [ ]
+
+-- content word lexicon
+#token PN John Mary
+#token V ذهب يذهب لف
+#token V2  أخبر يحرق see saw seen love loves loved look looks give gives gave concern concerns concerned make makes made decide decided
+#token V2 know knows knew known
+#token V3 give gives gave
+#token V2C call calls called consider considers considered
+#token V2V see sees saw consider considers considered stop stops stopped
+#token VS say says said believe believes
+#token VV want wants try tries
+#token A old good curious black best cold modified tired bad large larger
+#token N رأس sleep loves sleeps man men woman women cat cats doctor beer world elephant room hint hints reason reasons loser losers movie life
+#token N house president moon Earth girl girls wine beer
+#token Adv now today here before there yesterday tomorrow always
+#token Predet probably only
+#token Symb $ %
