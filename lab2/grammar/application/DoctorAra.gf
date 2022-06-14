@@ -56,17 +56,17 @@ lin
 --------------------------------
 
   coughAction = mkVP (mkV "سعل" FormI) ;
-  breatheAction = mkVP (mkV "تنفس" FormV ) ;
+  breatheAction = mkVP (mkV "تنفس" FormII ) ;
   vomitAction = mkVP (mkV "تقيأ" FormI) ;
   sleepAction = mkVP (mkV "نام" FormI ) ;
   -- dress and undress actions in Arabic need no prepositions
-  undressAction = mkVP take_V2 (mkNP thePl_Det (mkN "ثوب")) ;
-  dressAction = mkVP put_V2 (mkNP thePl_Det (mkN "ثوب")) ;
+  undressAction = mkVP (mkV2 (mkV "خلع" FormI)) (mkNP thePl_Det (mkN "ثوب")) ;
+  dressAction = mkVP (mkV2 (mkV "خلع" FormI)) (mkNP thePl_Det (mkN "ثوب")) ;
   eatAction = mkVP (mkV "أكل" FormI) ;
   drinkAction = mkVP (mkV "شرب" FormI) ;
   smokeAction = mkVP (mkV "دخن" FormI) ;
-  measureTemperatureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP the_Det (mkN "درجة حرارة الجسم")) ;
-  measureBloodPressureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP the_Det (mkN "ضغط الدم")) ;
+  measureTemperatureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP the_Det (mkN "درجة الحرارية للجسم")) ;
+  measureBloodPressureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP the_Det (mkN "ضغط للدم")) ;
 
   hospitalPlace = {at = pAdv "في المستشفى" ; to = pAdv "إلى المستشفى"} ;
   homePlace = {at = pAdv "في المنزل" ; to = pAdv "إلى المنزل"} ;
@@ -100,11 +100,11 @@ lin
 oper
   pAdv : Str -> Adv = ParadigmsAra.mkAdv ;
 
-  go_V = mkV "ذهب" FormVI ;
-  stay_V = mkV "بقي" FormVI ;
-  need_V2 = mkV2 (mkV "احتاج" FormVIII) ;
-  take_V2 = mkV2 (mkV "خلع" FormI) ;
-  put_V2 = mkV2 (mkV "لبس" FormI ) ;
+  go_V = mkV "ذهب" FormI ;
+  stay_V = mkV "بقي" FormIV ;
+  need_V2 = mkV2 (mkV "احتاج" FormI) ;
+  take_V2 = mkV2 (mkV "أخذ" FormI) ;
+  put_V2 = mkV2 (mkV "وضع" FormI ) ;
   vaccinate_V2 = mkV2 (mkV "لقح" FormII) ;
   examine_V2 = mkV2 (mkV "فحص" FormI) ;
 
