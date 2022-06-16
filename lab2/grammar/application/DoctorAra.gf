@@ -65,8 +65,8 @@ lin
   eatAction = mkVP (mkV "أكل" FormI) ;
   drinkAction = mkVP (mkV "شرب" FormI) ;
   smokeAction = mkVP (mkV "دخن" FormI) ;
-  measureTemperatureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP the_Det (mkN "درجة الحرارية للجسم")) ;
-  measureBloodPressureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP the_Det (mkN "ضغط للدم")) ;
+  measureTemperatureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP (mkN "درجة حرارة الجسم")) ;
+  measureBloodPressureAction = mkVP (mkV2 (mkV "قاس" FormI)) (mkNP (mkN "ضغط الدم")) ;
 
   hospitalPlace = {at = pAdv "في المستشفى" ; to = pAdv "إلى المستشفى"} ;
   homePlace = {at = pAdv "في المنزل" ; to = pAdv "إلى المنزل"} ;
