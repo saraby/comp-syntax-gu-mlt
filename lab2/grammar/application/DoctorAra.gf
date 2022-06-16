@@ -61,7 +61,7 @@ lin
   sleepAction = mkVP (mkV "نام" FormI ) ;
   -- dress and undress actions in Arabic need no prepositions
   undressAction = mkVP (mkV2 (mkV "خلع" FormI)) (mkNP thePl_Det (mkN "ثوب")) ;
-  dressAction = mkVP (mkV2 (mkV "خلع" FormI)) (mkNP thePl_Det (mkN "ثوب")) ;
+  dressAction = mkVP (mkV2 (mkV "لبس" FormI)) (mkNP thePl_Det (mkN "ثوب")) ;
   eatAction = mkVP (mkV "أكل" FormI) ;
   drinkAction = mkVP (mkV "شرب" FormI) ;
   smokeAction = mkVP (mkV "دخن" FormI) ;
